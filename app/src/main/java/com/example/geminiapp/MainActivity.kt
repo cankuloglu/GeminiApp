@@ -40,9 +40,6 @@ import java.util.Locale
 import com.example.geminiapp.adapter.MessageAdapter
 import com.example.geminiapp.dataclass.Message
 
-
-
-//"AIzaSyD8i_bXCLmHrSWzBjXF4k4Zz8jnMxcKsR4"
 class MainActivity : AppCompatActivity() {
     private var textToSpeechActive = true
     private val REQUEST_CODE_OVERLAY_PERMISSION = 101
