@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="navajo_white">#FFDEAD</color># f4a460
+    <color name="moccasin">#ffe4b5</color>
+    <color name="model_msg_color">#673AB7</color>
+    <color name="cyan">#00FFFF</color>
+    <color name="user_msg_color">#212121</color>
+    <color name="dark_purple">#301934</color>047885
+    <color name="turkuaz">#047885</color>
+
+</resources>

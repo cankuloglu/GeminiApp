@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    android:padding="0dp"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/dark_purple"
+            app:title="AI Assistance"
+            app:titleTextColor="@android:color/white"
+
+            />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/messageImageView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/baseline_question_answer_24" />
+
+        <TextView
+            android:id="@+id/serviceReadyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="Ready for speech input!"
+            android:textColor="#00FFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="@drawable/speech_ready_background"
+            android:padding="5dp"/>
+        <TextView
+            android:id="@+id/speechBeginningTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="Speech started!"
+            android:textColor="#00FFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="@drawable/speech_start_background"
+            android:padding="5dp"/>
+        <TextView
+            android:id="@+id/speechEndTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="Speech ended!"
+            android:textColor="#00FFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="@drawable/speech_end_background"
+            android:padding="5dp"/>
+        <TextView
+            android:id="@+id/errorNoMatchTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="No voice detected!"
+            android:textColor="#00FFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="@drawable/speech_end_background"
+            android:padding="5dp"/>
+        <TextView
+            android:id="@+id/voiceAssistantOffTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="Voice Assistant Off!"
+            android:textColor="#00FFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="@drawable/speech_end_background"
+            android:padding="5dp"
+             />
+
+        <ImageView
+            android:id="@+id/startServiceButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/circle_background"
+            android:src="@drawable/ic_mic"
+            android:padding="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="310dp"
+            >
+
+        </ImageView>
+
+
+
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="5dp">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:background="@color/dark_purple"
+        android:layout_alignParentBottom="true">
+
+        <EditText
+            android:id="@+id/commandText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter text here."
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:textColorHint="@android:color/darker_gray"
+            android:padding="10dp"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/promptButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_background"
+            android:src="@drawable/baseline_send_24"
+            android:padding="10dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="15dp" />
+
+        <ImageView
+            android:id="@+id/voiceButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_background"
+            android:padding="10dp"
+            android:src="@drawable/baseline_volume_up_24" />
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
